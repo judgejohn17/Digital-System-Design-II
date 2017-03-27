@@ -1,0 +1,6 @@
+work	"Coin_Controller.vhd"
+work	"Usr_interaction.vhd"
+work	"coin_rx.vhd"
+work	"seven_seg_dec.vhd"
+work	"seven_seg_disp.vhd"
+work	"vending_machine_controller.vhd"

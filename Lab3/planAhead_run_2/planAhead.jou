@@ -1,0 +1,75 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Thu Mar 31 10:18:40 2016
+# Process ID: 4144
+# Log file: D:/DSDII/Lab3/planAhead_run_2/planAhead.log
+# Journal file: D:/DSDII/Lab3/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/DSDII/Lab3/pa.fromNetlist.tcl
+startgroup
+set_property package_pin T5 [get_ports {Control[3]}]
+endgroup
+startgroup
+set_property package_pin V8 [get_ports {Control[2]}]
+endgroup
+startgroup
+set_property package_pin U8 [get_ports {Control[1]}]
+endgroup
+startgroup
+set_property package_pin N8 [get_ports {Control[0]}]
+endgroup
+startgroup
+set_property package_pin M8 [get_ports {Input1[0]}]
+endgroup
+startgroup
+set_property package_pin V9 [get_ports {Input1[1]}]
+endgroup
+startgroup
+set_property package_pin T9 [get_ports {Input2[0]}]
+endgroup
+startgroup
+set_property package_pin T10 [get_ports {Input2[1]}]
+endgroup
+startgroup
+set_property package_pin M11 [get_ports {Output[0]}]
+endgroup
+startgroup
+set_property package_pin N11 [get_ports {Output[1]}]
+endgroup
+startgroup
+set_property package_pin R11 [get_ports {Output[2]}]
+endgroup
+startgroup
+set_property package_pin T11 [get_ports {Output[3]}]
+endgroup
+set_property package_pin "" [get_ports [list  {Output[5]}]]
+set_property is_loc_fixed false [get_ports [list  {Input2[1]}]]
+set_property package_pin "" [get_ports [list  {Input2[1]}]]
+set_property package_pin "" [get_ports [list  {Input2[0]}]]
+startgroup
+set_property package_pin T9 [get_ports {Input2[1]}]
+endgroup
+startgroup
+set_property package_pin T10 [get_ports {Input2[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {Input1[0]}]]
+startgroup
+set_property package_pin M8 [get_ports {Input1[1]}]
+endgroup
+startgroup
+set_property package_pin V9 [get_ports {Input1[0]}]
+endgroup
+set_property pulltype PULLDOWN [get_ports [list {Input1[15]} {Input1[14]} {Input1[13]} {Input1[12]} {Input1[11]} {Input1[10]} {Input1[9]} {Input1[8]} {Input1[7]} {Input1[6]} {Input1[5]} {Input1[4]} {Input1[3]} {Input1[2]} {Input1[1]} {Input1[0]}]]
+set_property pulltype NONE [get_ports [list {Input1[1]}]]
+set_property pulltype NONE [get_ports [list {Input1[0]}]]
+set_property pulltype PULLDOWN [get_ports [list {Input2[15]} {Input2[14]} {Input2[13]} {Input2[12]} {Input2[11]} {Input2[10]} {Input2[9]} {Input2[8]} {Input2[7]} {Input2[6]} {Input2[5]} {Input2[4]} {Input2[3]} {Input2[2]} {Input2[1]} {Input2[0]}]]
+set_property pulltype NONE [get_ports [list {Input2[1]}]]
+set_property pulltype NONE [get_ports [list {Input2[0]}]]
+set_property pulltype PULLDOWN [get_ports [list {Output[15]} {Output[14]} {Output[13]} {Output[12]} {Output[11]} {Output[10]} {Output[9]} {Output[8]} {Output[7]} {Output[6]} {Output[5]} {Output[4]} {Output[3]} {Output[2]} {Output[1]} {Output[0]}]]
+set_property pulltype NONE [get_ports [list {Output[3]}]]
+set_property pulltype NONE [get_ports [list {Output[2]}]]
+set_property pulltype NONE [get_ports [list {Output[1]}]]
+set_property pulltype NONE [get_ports [list {Output[0]}]]
+save_constraints

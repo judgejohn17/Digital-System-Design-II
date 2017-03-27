@@ -1,0 +1,65 @@
+xst -intstyle ise -ifn "D:/DSDII/Lab5/MultiplierWrapper.xst" -ofn "D:/DSDII/Lab5/MultiplierWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MultiplierWrapper.ucf -p xc6slx16-csg324-3 MultiplierWrapper.ngc MultiplierWrapper.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MultiplierWrapper_map.ncd MultiplierWrapper.ngd MultiplierWrapper.pcf 
+par -w -intstyle ise -ol high -mt off MultiplierWrapper_map.ncd MultiplierWrapper.ncd MultiplierWrapper.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MultiplierWrapper.twx MultiplierWrapper.ncd -o MultiplierWrapper.twr MultiplierWrapper.pcf -ucf MultiplierWrapper.ucf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MultiplierWrapper.ucf -p xc6slx16-csg324-3 MultiplierWrapper.ngc MultiplierWrapper.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MultiplierWrapper_map.ncd MultiplierWrapper.ngd MultiplierWrapper.pcf 
+par -w -intstyle ise -ol high -mt off MultiplierWrapper_map.ncd MultiplierWrapper.ncd MultiplierWrapper.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MultiplierWrapper.twx MultiplierWrapper.ncd -o MultiplierWrapper.twr MultiplierWrapper.pcf -ucf MultiplierWrapper.ucf 
+bitgen -intstyle ise -f MultiplierWrapper.ut MultiplierWrapper.ncd 
+xst -intstyle ise -ifn "D:/DSDII/Lab5/MultiplierWrapper.xst" -ofn "D:/DSDII/Lab5/MultiplierWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MultiplierWrapper.ucf -p xc6slx16-csg324-3 MultiplierWrapper.ngc MultiplierWrapper.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MultiplierWrapper_map.ncd MultiplierWrapper.ngd MultiplierWrapper.pcf 
+par -w -intstyle ise -ol high -mt off MultiplierWrapper_map.ncd MultiplierWrapper.ncd MultiplierWrapper.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MultiplierWrapper.twx MultiplierWrapper.ncd -o MultiplierWrapper.twr MultiplierWrapper.pcf -ucf MultiplierWrapper.ucf 
+netgen -intstyle ise -s 3  -pcf MultiplierWrapper.pcf -rpw 100 -tpw 0 -ar Structure -tm MultiplierWrapper -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim MultiplierWrapper.ncd MultiplierWrapper_timesim.vhd 
+xst -intstyle ise -ifn "D:/DSDII/Lab5/MultiplierWrapper.xst" -ofn "D:/DSDII/Lab5/MultiplierWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MultiplierWrapper.ucf -p xc6slx16-csg324-3 MultiplierWrapper.ngc MultiplierWrapper.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MultiplierWrapper_map.ncd MultiplierWrapper.ngd MultiplierWrapper.pcf 
+par -w -intstyle ise -ol high -mt off MultiplierWrapper_map.ncd MultiplierWrapper.ncd MultiplierWrapper.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MultiplierWrapper.twx MultiplierWrapper.ncd -o MultiplierWrapper.twr MultiplierWrapper.pcf -ucf MultiplierWrapper.ucf 
+netgen -intstyle ise -s 3  -pcf MultiplierWrapper.pcf -rpw 100 -tpw 0 -ar Structure -tm MultiplierWrapper -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim MultiplierWrapper.ncd MultiplierWrapper_timesim.vhd 
+xst -intstyle ise -ifn "D:/DSDII/Lab5/MultiplierWrapper.xst" -ofn "D:/DSDII/Lab5/MultiplierWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MultiplierWrapper.ucf -p xc6slx16-csg324-3 MultiplierWrapper.ngc MultiplierWrapper.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MultiplierWrapper_map.ncd MultiplierWrapper.ngd MultiplierWrapper.pcf 
+par -w -intstyle ise -ol high -mt off MultiplierWrapper_map.ncd MultiplierWrapper.ncd MultiplierWrapper.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MultiplierWrapper.twx MultiplierWrapper.ncd -o MultiplierWrapper.twr MultiplierWrapper.pcf -ucf MultiplierWrapper.ucf 
+netgen -intstyle ise -s 3  -pcf MultiplierWrapper.pcf -rpw 100 -tpw 0 -ar Structure -tm MultiplierWrapper -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim MultiplierWrapper.ncd MultiplierWrapper_timesim.vhd 
+bitgen -intstyle ise -f MultiplierWrapper.ut MultiplierWrapper.ncd 
+xst -intstyle ise -ifn "D:/DSDII/Lab5/MultiplierWrapper.xst" -ofn "D:/DSDII/Lab5/MultiplierWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MultiplierWrapper.ucf -p xc6slx16-csg324-3 MultiplierWrapper.ngc MultiplierWrapper.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MultiplierWrapper_map.ncd MultiplierWrapper.ngd MultiplierWrapper.pcf 
+par -w -intstyle ise -ol high -mt off MultiplierWrapper_map.ncd MultiplierWrapper.ncd MultiplierWrapper.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MultiplierWrapper.twx MultiplierWrapper.ncd -o MultiplierWrapper.twr MultiplierWrapper.pcf -ucf MultiplierWrapper.ucf 
+netgen -intstyle ise -s 3  -pcf MultiplierWrapper.pcf -rpw 100 -tpw 0 -ar Structure -tm MultiplierWrapper -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim MultiplierWrapper.ncd MultiplierWrapper_timesim.vhd 
+bitgen -intstyle ise -f MultiplierWrapper.ut MultiplierWrapper.ncd 
+netgen -intstyle ise -ar Structure -tm MultiplierWrapper -w -dir netgen/synthesis -ofmt vhdl -sim MultiplierWrapper.ngc MultiplierWrapper_synthesis.vhd 
+xst -intstyle ise -ifn "D:/DSDII/Lab5/MultiplierWrapper.xst" -ofn "D:/DSDII/Lab5/MultiplierWrapper.syr" 
+xst -intstyle ise -ifn "D:/DSDII/Lab5/MultiplierWrapper.xst" -ofn "D:/DSDII/Lab5/MultiplierWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MultiplierWrapper.ucf -p xc6slx16-csg324-3 MultiplierWrapper.ngc MultiplierWrapper.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MultiplierWrapper_map.ncd MultiplierWrapper.ngd MultiplierWrapper.pcf 
+par -w -intstyle ise -ol high -mt off MultiplierWrapper_map.ncd MultiplierWrapper.ncd MultiplierWrapper.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MultiplierWrapper.twx MultiplierWrapper.ncd -o MultiplierWrapper.twr MultiplierWrapper.pcf -ucf MultiplierWrapper.ucf 
+bitgen -intstyle ise -f MultiplierWrapper.ut MultiplierWrapper.ncd 
+xst -intstyle ise -ifn "D:/DSDII/Lab5/MultiplierWrapper.xst" -ofn "D:/DSDII/Lab5/MultiplierWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MultiplierWrapper.ucf -p xc6slx16-csg324-3 MultiplierWrapper.ngc MultiplierWrapper.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MultiplierWrapper_map.ncd MultiplierWrapper.ngd MultiplierWrapper.pcf 
+par -w -intstyle ise -ol high -mt off MultiplierWrapper_map.ncd MultiplierWrapper.ncd MultiplierWrapper.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MultiplierWrapper.twx MultiplierWrapper.ncd -o MultiplierWrapper.twr MultiplierWrapper.pcf -ucf MultiplierWrapper.ucf 
+netgen -intstyle ise -s 3  -pcf MultiplierWrapper.pcf -rpw 100 -tpw 0 -ar Structure -tm MultiplierWrapper -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim MultiplierWrapper.ncd MultiplierWrapper_timesim.vhd 
+bitgen -intstyle ise -f MultiplierWrapper.ut MultiplierWrapper.ncd 
+xst -intstyle ise -ifn "D:/DSDII/Lab5/MultiplierWrapper.xst" -ofn "D:/DSDII/Lab5/MultiplierWrapper.syr" 
+netgen -intstyle ise -ar Structure -tm MultiplierWrapper -w -dir netgen/synthesis -ofmt vhdl -sim MultiplierWrapper.ngc MultiplierWrapper_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MultiplierWrapper.ucf -p xc6slx16-csg324-3 MultiplierWrapper.ngc MultiplierWrapper.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MultiplierWrapper_map.ncd MultiplierWrapper.ngd MultiplierWrapper.pcf 
+par -w -intstyle ise -ol high -mt off MultiplierWrapper_map.ncd MultiplierWrapper.ncd MultiplierWrapper.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MultiplierWrapper.twx MultiplierWrapper.ncd -o MultiplierWrapper.twr MultiplierWrapper.pcf -ucf MultiplierWrapper.ucf 
+netgen -intstyle ise -s 3  -pcf MultiplierWrapper.pcf -rpw 100 -tpw 0 -ar Structure -tm MultiplierWrapper -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim MultiplierWrapper.ncd MultiplierWrapper_timesim.vhd 
+bitgen -intstyle ise -f MultiplierWrapper.ut MultiplierWrapper.ncd 
+xst -intstyle ise -ifn "D:/DSDII/Lab5/MultiplierWrapper.xst" -ofn "D:/DSDII/Lab5/MultiplierWrapper.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc MultiplierWrapper.ucf -p xc6slx16-csg324-3 MultiplierWrapper.ngc MultiplierWrapper.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MultiplierWrapper_map.ncd MultiplierWrapper.ngd MultiplierWrapper.pcf 
+par -w -intstyle ise -ol high -mt off MultiplierWrapper_map.ncd MultiplierWrapper.ncd MultiplierWrapper.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MultiplierWrapper.twx MultiplierWrapper.ncd -o MultiplierWrapper.twr MultiplierWrapper.pcf -ucf MultiplierWrapper.ucf 
+netgen -intstyle ise -s 3  -pcf MultiplierWrapper.pcf -rpw 100 -tpw 0 -ar Structure -tm MultiplierWrapper -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim MultiplierWrapper.ncd MultiplierWrapper_timesim.vhd 

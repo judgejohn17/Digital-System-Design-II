@@ -1,0 +1,84 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/DSDII/Exercise03/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to D:/DSDII/Exercise03/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: ALU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\DSDII\Exercise03\LogicalRightShifter.vhd" into library work
+Parsing entity <LogicalRightShifter>.
+Parsing architecture <Dataflow> of entity <logicalrightshifter>.
+Parsing VHDL file "D:\DSDII\Exercise03\LogicalLeftShifter.vhd" into library work
+Parsing entity <LogicalLeftShifter>.
+Parsing architecture <Dataflow> of entity <logicalleftshifter>.
+Parsing VHDL file "D:\DSDII\Exercise03\FullAdder.vhd" into library work
+Parsing entity <FullAdder>.
+Parsing architecture <dataflow> of entity <fulladder>.
+Parsing VHDL file "D:\DSDII\Exercise03\ArithmeticRightShifter.vhd" into library work
+Parsing entity <ArithmeticRightShifter>.
+Parsing architecture <Dataflow> of entity <arithmeticrightshifter>.
+Parsing VHDL file "D:\DSDII\Exercise03\Variable_Shifter_16.vhd" into library work
+Parsing entity <Variable_Shifter_16>.
+Parsing architecture <Behavioral> of entity <variable_shifter_16>.
+Parsing VHDL file "D:\DSDII\Exercise03\MUX7_1.vhd" into library work
+Parsing entity <Mux7_1>.
+Parsing architecture <Behavioral> of entity <mux7_1>.
+Parsing VHDL file "D:\DSDII\Exercise03\Multiplier_8.vhd" into library work
+Parsing entity <Multiplier_8>.
+Parsing architecture <Structural> of entity <multiplier_8>.
+Parsing VHDL file "D:\DSDII\Exercise03\LogicalUnit.vhd" into library work
+Parsing entity <LogicalUnit>.
+Parsing architecture <Behavioral> of entity <logicalunit>.
+Parsing VHDL file "D:\DSDII\Exercise03\Adder16Bit.vhd" into library work
+Parsing entity <AdderSub16Bit>.
+Parsing architecture <structural> of entity <addersub16bit>.
+Parsing VHDL file "D:\DSDII\Exercise03\ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <Structural> of entity <alu>.
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.35 secs
+ 
+--> 
+
+Total memory usage is 185428 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

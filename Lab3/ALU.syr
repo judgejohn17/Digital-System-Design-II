@@ -1,0 +1,436 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: ALU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ALU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ALU"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : ALU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\DSDII\Lab3\LogicalRightShifter.vhd" into library work
+Parsing entity <LogicalRightShifter>.
+Parsing architecture <Dataflow> of entity <logicalrightshifter>.
+Parsing VHDL file "D:\DSDII\Lab3\LogicalLeftShifter.vhd" into library work
+Parsing entity <LogicalLeftShifter>.
+Parsing architecture <Dataflow> of entity <logicalleftshifter>.
+Parsing VHDL file "D:\DSDII\Lab3\FullAdder.vhd" into library work
+Parsing entity <FullAdder>.
+Parsing architecture <dataflow> of entity <fulladder>.
+Parsing VHDL file "D:\DSDII\Lab3\ArithmeticRightShifter.vhd" into library work
+Parsing entity <ArithmeticRightShifter>.
+Parsing architecture <Dataflow> of entity <arithmeticrightshifter>.
+Parsing VHDL file "D:\DSDII\Lab3\andgate.vhd" into library work
+Parsing entity <andgate>.
+Parsing architecture <Behavioral> of entity <andgate>.
+Parsing VHDL file "D:\DSDII\Lab3\Variable_Shifter_16.vhd" into library work
+Parsing entity <Variable_Shifter_16>.
+Parsing architecture <Behavioral> of entity <variable_shifter_16>.
+Parsing VHDL file "D:\DSDII\Lab3\MUX7_1.vhd" into library work
+Parsing entity <Mux7_1>.
+Parsing architecture <Behavioral> of entity <mux7_1>.
+Parsing VHDL file "D:\DSDII\Lab3\Multiplier_8.vhd" into library work
+Parsing entity <Multiplier_8>.
+Parsing architecture <Structural> of entity <multiplier_8>.
+Parsing VHDL file "D:\DSDII\Lab3\LogicalUnit.vhd" into library work
+Parsing entity <LogicalUnit>.
+Parsing architecture <Behavioral> of entity <logicalunit>.
+Parsing VHDL file "D:\DSDII\Lab3\Adder16Bit.vhd" into library work
+Parsing entity <AdderSub16Bit>.
+Parsing architecture <structural> of entity <addersub16bit>.
+Parsing VHDL file "D:\DSDII\Lab3\ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <Structural> of entity <alu>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <ALU> (architecture <Structural>) from library <work>.
+
+Elaborating entity <AdderSub16Bit> (architecture <structural>) from library <work>.
+
+Elaborating entity <FullAdder> (architecture <dataflow>) from library <work>.
+
+Elaborating entity <LogicalUnit> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Multiplier_8> (architecture <Structural>) from library <work>.
+WARNING:HDLCompiler:871 - "D:\DSDII\Lab3\Multiplier_8.vhd" Line 42: Using initial value '0' for zerosignal since it is never assigned
+
+Elaborating entity <andgate> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Variable_Shifter_16> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <LogicalLeftShifter> (architecture <Dataflow>) from library <work>.
+
+Elaborating entity <ArithmeticRightShifter> (architecture <Dataflow>) from library <work>.
+
+Elaborating entity <LogicalRightShifter> (architecture <Dataflow>) from library <work>.
+
+Elaborating entity <Mux7_1> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ALU>.
+    Related source file is "D:\DSDII\Lab3\ALU.vhd".
+    Summary:
+	no macro.
+Unit <ALU> synthesized.
+
+Synthesizing Unit <AdderSub16Bit>.
+    Related source file is "D:\DSDII\Lab3\Adder16Bit.vhd".
+INFO:Xst:3210 - "D:\DSDII\Lab3\Adder16Bit.vhd" line 40: Output port <Co> of the instance <Gen_ADD[15].FA> is unconnected or connected to loadless signal.
+    Summary:
+Unit <AdderSub16Bit> synthesized.
+
+Synthesizing Unit <FullAdder>.
+    Related source file is "D:\DSDII\Lab3\FullAdder.vhd".
+    Summary:
+Unit <FullAdder> synthesized.
+
+Synthesizing Unit <LogicalUnit>.
+    Related source file is "D:\DSDII\Lab3\LogicalUnit.vhd".
+    Summary:
+Unit <LogicalUnit> synthesized.
+
+Synthesizing Unit <Multiplier_8>.
+    Related source file is "D:\DSDII\Lab3\Multiplier_8.vhd".
+    Summary:
+	no macro.
+Unit <Multiplier_8> synthesized.
+
+Synthesizing Unit <andgate>.
+    Related source file is "D:\DSDII\Lab3\andgate.vhd".
+    Summary:
+	no macro.
+Unit <andgate> synthesized.
+
+Synthesizing Unit <Variable_Shifter_16>.
+    Related source file is "D:\DSDII\Lab3\Variable_Shifter_16.vhd".
+    Found 16-bit 4-to-1 multiplexer for signal <Output> created at line 50.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Variable_Shifter_16> synthesized.
+
+Synthesizing Unit <LogicalLeftShifter>.
+    Related source file is "D:\DSDII\Lab3\LogicalLeftShifter.vhd".
+    Found 16-bit 16-to-1 multiplexer for signal <C> created at line 32.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <LogicalLeftShifter> synthesized.
+
+Synthesizing Unit <ArithmeticRightShifter>.
+    Related source file is "D:\DSDII\Lab3\ArithmeticRightShifter.vhd".
+    Found 16-bit 16-to-1 multiplexer for signal <C> created at line 34.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <ArithmeticRightShifter> synthesized.
+
+Synthesizing Unit <LogicalRightShifter>.
+    Related source file is "D:\DSDII\Lab3\LogicalRightShifter.vhd".
+    Found 16-bit 16-to-1 multiplexer for signal <C> created at line 32.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <LogicalRightShifter> synthesized.
+
+Synthesizing Unit <Mux7_1>.
+    Related source file is "D:\DSDII\Lab3\MUX7_1.vhd".
+    Summary:
+	inferred  10 Multiplexer(s).
+Unit <Mux7_1> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 14
+ 16-bit 16-to-1 multiplexer                            : 3
+ 16-bit 2-to-1 multiplexer                             : 10
+ 16-bit 4-to-1 multiplexer                             : 1
+# Xors                                                 : 161
+ 1-bit xor2                                            : 160
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 14
+ 16-bit 16-to-1 multiplexer                            : 3
+ 16-bit 2-to-1 multiplexer                             : 10
+ 16-bit 4-to-1 multiplexer                             : 1
+# Xors                                                 : 161
+ 1-bit xor2                                            : 160
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <AdderSub16Bit> ...
+
+Optimizing unit <Multiplier_8> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ALU, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ALU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 241
+#      GND                         : 1
+#      LUT2                        : 17
+#      LUT3                        : 10
+#      LUT4                        : 25
+#      LUT5                        : 44
+#      LUT6                        : 135
+#      MUXF7                       : 9
+# IO Buffers                       : 52
+#      IBUF                        : 36
+#      OBUF                        : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                  231  out of   9112     2%  
+    Number used as Logic:               231  out of   9112     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    231
+   Number with an unused Flip Flop:     231  out of    231   100%  
+   Number with an unused LUT:             0  out of    231     0%  
+   Number of fully used LUT-FF pairs:     0  out of    231     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          52
+ Number of bonded IOBs:                  52  out of    232    22%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 18.935ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 14752 / 16
+-------------------------------------------------------------------------
+Delay:               18.935ns (Levels of Logic = 15)
+  Source:            Input2<1> (PAD)
+  Destination:       Output<15> (PAD)
+
+  Data Path: Input2<1> to Output<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            57   1.222   1.958  Input2_1_IBUF (Input2_1_IBUF)
+     LUT6:I0->O            2   0.203   0.981  Multiplier_8_0/FA06/Mxor_Sum_xo<0>1 (Multiplier_8_0/OutOfFA<0><6>)
+     LUT6:I0->O            2   0.203   0.981  Multiplier_8_0/FA15/Mxor_Sum_xo<0>1 (Multiplier_8_0/OutOfFA<1><5>)
+     LUT6:I0->O            2   0.203   0.981  Multiplier_8_0/FA24/Mxor_Sum_xo<0>1 (Multiplier_8_0/OutOfFA<2><4>)
+     LUT6:I0->O            2   0.203   0.864  Multiplier_8_0/FA33/Mxor_Sum_xo<0>1 (Multiplier_8_0/OutOfFA<3><3>)
+     LUT6:I2->O            4   0.203   0.788  Multiplier_8_0/FA42/Co1 (Multiplier_8_0/C<4><2>)
+     LUT4:I2->O            2   0.203   0.981  Multiplier_8_0/FA52/Mxor_Sum_xo<0>1 (Multiplier_8_0/OutOfFA<5><2>)
+     LUT6:I0->O            2   0.203   0.981  Multiplier_8_0/FA61/Co1 (Multiplier_8_0/C<6><1>)
+     LUT6:I0->O            3   0.203   0.898  Multiplier_8_0/FA62/Co1 (Multiplier_8_0/C<6><2>)
+     LUT6:I2->O            3   0.203   0.879  Multiplier_8_0/FA64/Co1 (Multiplier_8_0/C<6><4>)
+     LUT5:I2->O            2   0.205   0.864  Multiplier_8_0/FA66/Co1 (Multiplier_8_0/C<6><6>)
+     LUT5:I1->O            1   0.203   0.000  Mux7_1_0/Mmux_Output148_G (N27)
+     MUXF7:I1->O           1   0.140   0.827  Mux7_1_0/Mmux_Output148 (Mux7_1_0/Mmux_Output147)
+     LUT4:I0->O            1   0.203   0.579  Mux7_1_0/Mmux_Output149 (Output_15_OBUF)
+     OBUF:I->O                 2.571          Output_15_OBUF (Output<15>)
+    ----------------------------------------
+    Total                     18.935ns (6.371ns logic, 12.564ns route)
+                                       (33.6% logic, 66.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.25 secs
+ 
+--> 
+
+Total memory usage is 261436 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

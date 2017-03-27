@@ -1,0 +1,119 @@
+# Reading C:/MentorGraphics/tcl/vsim/pref.tcl 
+# //  ModelSim SE-64 10.1d Nov  1 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {testbench.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LogicalRightShifter
+# -- Compiling architecture Dataflow of LogicalRightShifter
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LogicalLeftShifter
+# -- Compiling architecture Dataflow of LogicalLeftShifter
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FullAdder
+# -- Compiling architecture dataflow of FullAdder
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ArithmeticRightShifter
+# -- Compiling architecture Dataflow of ArithmeticRightShifter
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andgate
+# -- Compiling architecture Behavioral of andgate
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Variable_Shifter_16
+# -- Compiling architecture Behavioral of Variable_Shifter_16
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mux7_1
+# -- Compiling architecture Behavioral of Mux7_1
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Multiplier_8
+# -- Compiling architecture Structural of Multiplier_8
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LogicalUnit
+# -- Compiling architecture Behavioral of LogicalUnit
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity AdderSub16Bit
+# -- Compiling architecture structural of AdderSub16Bit
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ALU
+# -- Compiling architecture Structural of ALU
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity testbench
+# -- Compiling architecture behavioral of testbench
+# vsim -lib work -voptargs=\"+acc\" -t 1ps work.testbench 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.testbench(behavioral)#1
+# Loading work.alu(structural)#1
+# Loading work.addersub16bit(structural)#1
+# Loading work.fulladder(dataflow)#1
+# Loading work.logicalunit(behavioral)#1
+# Loading work.multiplier_8(structural)#1
+# Loading work.andgate(behavioral)#1
+# Loading work.variable_shifter_16(behavioral)#1
+# Loading work.logicalleftshifter(dataflow)#1
+# Loading work.arithmeticrightshifter(dataflow)#1
+# Loading work.logicalrightshifter(dataflow)#1
+# Loading work.mux7_1(behavioral)#1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: jjj4008  Hostname: FSL-12  ProcessID: 6256
+# 
+#           Attempting to use alternate WLF file "./wlftk2me0g".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftk2me0g
+# 
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree

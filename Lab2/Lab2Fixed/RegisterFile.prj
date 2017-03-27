@@ -1,0 +1,4 @@
+vhdl work "RegisterModule.vhd"
+vhdl work "MUX8_1.vhd"
+vhdl work "Decoder3to8.vhd"
+vhdl work "RegisterFile.vhd"

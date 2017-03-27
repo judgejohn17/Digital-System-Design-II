@@ -1,0 +1,3 @@
+vhdl work "seven_seg_dec.vhd"
+vhdl work "Coin_Controller.vhd"
+vhdl work "vending_machine_controller.vhd"

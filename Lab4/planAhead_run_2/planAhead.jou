@@ -1,0 +1,93 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Wed Apr 13 20:31:35 2016
+# Process ID: 119400
+# Log file: D:/DSDII/Lab4/planAhead_run_2/planAhead.log
+# Journal file: D:/DSDII/Lab4/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/DSDII/Lab4/pa.fromNetlist.tcl
+set_property package_pin "" [get_ports [list  Amt_err]]
+save_constraints
+startgroup
+set_property package_pin N15 [get_ports hund_anode_out]
+endgroup
+startgroup
+set_property package_pin D9 [get_ports Nrcd_in]
+endgroup
+set_property is_loc_fixed false [get_ports [list  Nrcd_in]]
+set_property package_pin "" [get_ports [list  Nrcd_out]]
+set_property package_pin "" [get_ports [list  Nrcd_in]]
+startgroup
+set_property package_pin P18 [get_ports tens_anode_out]
+endgroup
+startgroup
+set_property package_pin N16 [get_ports unused_anode]
+endgroup
+startgroup
+set_property package_pin P17 [get_ports ones_anode_out]
+endgroup
+set_property is_loc_fixed false [get_ports [list  ones_anode_out]]
+set_property is_loc_fixed true [get_ports [list  ones_anode_out]]
+startgroup
+set_property package_pin R11 [get_ports Drop_soda_out]
+endgroup
+startgroup
+set_property package_pin B8 [get_ports Soda_req_in]
+endgroup
+set_property package_pin "" [get_ports [list  Qrcd_in]]
+set_property package_pin "" [get_ports [list  Qrcd_out]]
+startgroup
+set_property package_pin T11 [get_ports Drop_soda_out]
+endgroup
+startgroup
+set_property package_pin R11 [get_ports Amt_err]
+endgroup
+set_property package_pin "" [get_ports [list  Nrcd_in]]
+startgroup
+set_property package_pin N11 [get_ports Qrcd_out]
+endgroup
+startgroup
+set_property package_pin V15 [get_ports Nrcd_out]
+endgroup
+startgroup
+set_property package_pin M11 [get_ports Drcd_out]
+endgroup
+startgroup
+set_property package_pin C4 [get_ports Qrcd_in]
+endgroup
+startgroup
+set_property package_pin D9 [get_ports Nrcd_in]
+endgroup
+startgroup
+set_property package_pin V8 [get_ports {Soda_price_in[3]}]
+endgroup
+startgroup
+set_property package_pin U8 [get_ports {Soda_price_in[2]}]
+endgroup
+startgroup
+set_property package_pin N8 [get_ports {Soda_price_in[1]}]
+endgroup
+startgroup
+set_property package_pin M8 [get_ports {Soda_price_in[0]}]
+endgroup
+startgroup
+set_property package_pin V10 [get_ports Clk_in]
+endgroup
+save_constraints
+set_property package_pin "" [get_ports [list  hund_anode_out]]
+set_property package_pin "" [get_ports [list  ones_anode_out]]
+startgroup
+set_property package_pin N15 [get_ports tens_anode_out]
+endgroup
+startgroup
+set_property package_pin P17 [get_ports unused_anode]
+endgroup
+startgroup
+set_property package_pin N16 [get_ports ones_anode_out]
+endgroup
+startgroup
+set_property package_pin P18 [get_ports hund_anode_out]
+endgroup
+save_constraints

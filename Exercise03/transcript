@@ -1,0 +1,39 @@
+# Reading C:/MentorGraphics/tcl/vsim/pref.tcl 
+# //  ModelSim SE-64 10.1d Nov  1 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {ALU.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity AdderSub16Bit
+# -- Compiling architecture structural of AdderSub16Bit
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FullAdder
+# -- Compiling architecture dataflow of FullAdder
+# Model Technology ModelSim SE-64 vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Multiplier_8
+# -- Compiling architecture Structural of Multiplier_8
+# ** Error: Multiplier_8.vhd(113): (vcom-1272) Length of expected is 8; length of actual is 16.
+# 
+# ** Error: Multiplier_8.vhd(114): VHDL Compiler exiting
+# ** Error: C:/MentorGraphics/win64/vcom failed.
+# Error in macro ./ALU.fdo line 25
+# C:/MentorGraphics/win64/vcom failed.
+#     while executing
+# "vcom -explicit  -93 "Multiplier_8.vhd""

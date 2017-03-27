@@ -1,0 +1,34 @@
+Command line:
+   Multiplier_8_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  61103
+
+Tue Mar 15 16:06:44 2016
+
+
+ Elaboration Time: 0.156001 sec
+
+ Current Memory Usage: 1474.82 Meg
+
+ Total Signals          : 311
+ Total Nets             : 353
+ Total Signal Drivers   : 202
+ Total Blocks           : 115
+ Total Primitive Blocks : 65
+ Total Processes        : 202
+ Total Traceable Variables  : 65
+ Total Scalar Nets and Variables : 770
+In process Multiplier_8.vhd:113 
+ Target Size 8 and source size 16 for array dimension 0 does not match. 
+
+In process Multiplier_8.vhd:113 
+ Target Size 8 and source size 16 for array dimension 0 does not match. 
+
+
+ Total Simulation Time: 0.343202 sec
+
+ Current Memory Usage: 1002.93 Meg
+
+Tue Mar 15 16:08:24 2016
+

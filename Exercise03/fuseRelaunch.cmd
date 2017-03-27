@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "D:/DSDII/Exercise03/Multiplier_8_isim_beh.exe" -prj "D:/DSDII/Exercise03/Multiplier_8_beh.prj" "work.Multiplier_8" 

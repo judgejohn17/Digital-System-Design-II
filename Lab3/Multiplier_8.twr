@@ -1,0 +1,236 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml Multiplier_8.twx Multiplier_8.ncd -o Multiplier_8.twr
+Multiplier_8.pcf
+
+Design file:              Multiplier_8.ncd
+Physical constraint file: Multiplier_8.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+DATAIN1<0>     |DATAOUT<0>     |    7.609|
+DATAIN1<0>     |DATAOUT<1>     |    7.558|
+DATAIN1<0>     |DATAOUT<2>     |    7.611|
+DATAIN1<0>     |DATAOUT<3>     |    9.525|
+DATAIN1<0>     |DATAOUT<4>     |    9.107|
+DATAIN1<0>     |DATAOUT<5>     |   10.018|
+DATAIN1<0>     |DATAOUT<6>     |   11.226|
+DATAIN1<0>     |DATAOUT<7>     |   10.961|
+DATAIN1<0>     |DATAOUT<8>     |   12.323|
+DATAIN1<0>     |DATAOUT<9>     |   13.003|
+DATAIN1<0>     |DATAOUT<10>    |   14.401|
+DATAIN1<0>     |DATAOUT<11>    |   14.286|
+DATAIN1<0>     |DATAOUT<12>    |   14.794|
+DATAIN1<0>     |DATAOUT<13>    |   14.843|
+DATAIN1<1>     |DATAOUT<1>     |    7.534|
+DATAIN1<1>     |DATAOUT<2>     |    7.281|
+DATAIN1<1>     |DATAOUT<3>     |    9.614|
+DATAIN1<1>     |DATAOUT<4>     |    9.108|
+DATAIN1<1>     |DATAOUT<5>     |    9.931|
+DATAIN1<1>     |DATAOUT<6>     |   11.317|
+DATAIN1<1>     |DATAOUT<7>     |   11.052|
+DATAIN1<1>     |DATAOUT<8>     |   12.018|
+DATAIN1<1>     |DATAOUT<9>     |   12.698|
+DATAIN1<1>     |DATAOUT<10>    |   14.096|
+DATAIN1<1>     |DATAOUT<11>    |   13.981|
+DATAIN1<1>     |DATAOUT<12>    |   14.489|
+DATAIN1<1>     |DATAOUT<13>    |   14.538|
+DATAIN1<1>     |DATAOUT<14>    |    8.572|
+DATAIN1<1>     |DATAOUT<15>    |    8.478|
+DATAIN1<2>     |DATAOUT<2>     |    8.199|
+DATAIN1<2>     |DATAOUT<3>     |    9.870|
+DATAIN1<2>     |DATAOUT<4>     |    9.641|
+DATAIN1<2>     |DATAOUT<5>     |   10.408|
+DATAIN1<2>     |DATAOUT<6>     |   11.633|
+DATAIN1<2>     |DATAOUT<7>     |   11.368|
+DATAIN1<2>     |DATAOUT<8>     |   12.610|
+DATAIN1<2>     |DATAOUT<9>     |   13.290|
+DATAIN1<2>     |DATAOUT<10>    |   14.688|
+DATAIN1<2>     |DATAOUT<11>    |   14.573|
+DATAIN1<2>     |DATAOUT<12>    |   15.081|
+DATAIN1<2>     |DATAOUT<13>    |   15.130|
+DATAIN1<2>     |DATAOUT<14>    |    9.410|
+DATAIN1<2>     |DATAOUT<15>    |    9.316|
+DATAIN1<3>     |DATAOUT<3>     |    9.702|
+DATAIN1<3>     |DATAOUT<4>     |    9.482|
+DATAIN1<3>     |DATAOUT<5>     |   10.249|
+DATAIN1<3>     |DATAOUT<6>     |   11.110|
+DATAIN1<3>     |DATAOUT<7>     |   10.848|
+DATAIN1<3>     |DATAOUT<8>     |   11.808|
+DATAIN1<3>     |DATAOUT<9>     |   12.488|
+DATAIN1<3>     |DATAOUT<10>    |   13.886|
+DATAIN1<3>     |DATAOUT<11>    |   13.771|
+DATAIN1<3>     |DATAOUT<12>    |   14.279|
+DATAIN1<3>     |DATAOUT<13>    |   14.328|
+DATAIN1<3>     |DATAOUT<14>    |    8.701|
+DATAIN1<3>     |DATAOUT<15>    |    8.607|
+DATAIN1<4>     |DATAOUT<4>     |    8.164|
+DATAIN1<4>     |DATAOUT<5>     |    9.270|
+DATAIN1<4>     |DATAOUT<6>     |   10.103|
+DATAIN1<4>     |DATAOUT<7>     |   10.157|
+DATAIN1<4>     |DATAOUT<8>     |   11.024|
+DATAIN1<4>     |DATAOUT<9>     |   11.704|
+DATAIN1<4>     |DATAOUT<10>    |   13.102|
+DATAIN1<4>     |DATAOUT<11>    |   12.987|
+DATAIN1<4>     |DATAOUT<12>    |   13.495|
+DATAIN1<4>     |DATAOUT<13>    |   13.544|
+DATAIN1<4>     |DATAOUT<14>    |    7.762|
+DATAIN1<4>     |DATAOUT<15>    |    7.668|
+DATAIN1<5>     |DATAOUT<5>     |    7.597|
+DATAIN1<5>     |DATAOUT<6>     |    9.057|
+DATAIN1<5>     |DATAOUT<7>     |    8.831|
+DATAIN1<5>     |DATAOUT<8>     |   10.276|
+DATAIN1<5>     |DATAOUT<9>     |   10.956|
+DATAIN1<5>     |DATAOUT<10>    |   12.354|
+DATAIN1<5>     |DATAOUT<11>    |   12.239|
+DATAIN1<5>     |DATAOUT<12>    |   12.747|
+DATAIN1<5>     |DATAOUT<13>    |   12.796|
+DATAIN1<5>     |DATAOUT<14>    |    8.188|
+DATAIN1<5>     |DATAOUT<15>    |    8.094|
+DATAIN1<6>     |DATAOUT<6>     |    8.812|
+DATAIN1<6>     |DATAOUT<7>     |    8.547|
+DATAIN1<6>     |DATAOUT<8>     |    9.209|
+DATAIN1<6>     |DATAOUT<9>     |    9.889|
+DATAIN1<6>     |DATAOUT<10>    |   11.287|
+DATAIN1<6>     |DATAOUT<11>    |   11.172|
+DATAIN1<6>     |DATAOUT<12>    |   11.680|
+DATAIN1<6>     |DATAOUT<13>    |   11.729|
+DATAIN1<6>     |DATAOUT<14>    |    7.679|
+DATAIN1<6>     |DATAOUT<15>    |    7.585|
+DATAIN1<7>     |DATAOUT<7>     |    7.822|
+DATAIN1<7>     |DATAOUT<8>     |    8.548|
+DATAIN1<7>     |DATAOUT<9>     |    9.229|
+DATAIN1<7>     |DATAOUT<10>    |   10.627|
+DATAIN1<7>     |DATAOUT<11>    |   10.512|
+DATAIN1<7>     |DATAOUT<12>    |   11.020|
+DATAIN1<7>     |DATAOUT<13>    |   11.069|
+DATAIN2<0>     |DATAOUT<0>     |    6.690|
+DATAIN2<0>     |DATAOUT<1>     |    6.943|
+DATAIN2<0>     |DATAOUT<2>     |    6.851|
+DATAIN2<0>     |DATAOUT<3>     |    8.581|
+DATAIN2<0>     |DATAOUT<4>     |    8.474|
+DATAIN2<0>     |DATAOUT<5>     |    9.241|
+DATAIN2<0>     |DATAOUT<6>     |    9.786|
+DATAIN2<0>     |DATAOUT<7>     |    9.840|
+DATAIN2<0>     |DATAOUT<8>     |   10.417|
+DATAIN2<0>     |DATAOUT<9>     |   11.098|
+DATAIN2<0>     |DATAOUT<10>    |   12.496|
+DATAIN2<0>     |DATAOUT<11>    |   12.381|
+DATAIN2<0>     |DATAOUT<12>    |   12.889|
+DATAIN2<0>     |DATAOUT<13>    |   12.938|
+DATAIN2<1>     |DATAOUT<1>     |    6.877|
+DATAIN2<1>     |DATAOUT<2>     |    7.012|
+DATAIN2<1>     |DATAOUT<3>     |    9.138|
+DATAIN2<1>     |DATAOUT<4>     |    8.632|
+DATAIN2<1>     |DATAOUT<5>     |    9.455|
+DATAIN2<1>     |DATAOUT<6>     |   10.365|
+DATAIN2<1>     |DATAOUT<7>     |   10.100|
+DATAIN2<1>     |DATAOUT<8>     |   10.669|
+DATAIN2<1>     |DATAOUT<9>     |   11.350|
+DATAIN2<1>     |DATAOUT<10>    |   12.748|
+DATAIN2<1>     |DATAOUT<11>    |   12.633|
+DATAIN2<1>     |DATAOUT<12>    |   13.141|
+DATAIN2<1>     |DATAOUT<13>    |   13.190|
+DATAIN2<2>     |DATAOUT<2>     |    7.277|
+DATAIN2<2>     |DATAOUT<3>     |    8.485|
+DATAIN2<2>     |DATAOUT<4>     |    8.387|
+DATAIN2<2>     |DATAOUT<5>     |    9.340|
+DATAIN2<2>     |DATAOUT<6>     |   10.629|
+DATAIN2<2>     |DATAOUT<7>     |   10.364|
+DATAIN2<2>     |DATAOUT<8>     |   11.022|
+DATAIN2<2>     |DATAOUT<9>     |   11.702|
+DATAIN2<2>     |DATAOUT<10>    |   13.100|
+DATAIN2<2>     |DATAOUT<11>    |   12.985|
+DATAIN2<2>     |DATAOUT<12>    |   13.493|
+DATAIN2<2>     |DATAOUT<13>    |   13.542|
+DATAIN2<3>     |DATAOUT<3>     |    8.456|
+DATAIN2<3>     |DATAOUT<4>     |    8.370|
+DATAIN2<3>     |DATAOUT<5>     |    9.281|
+DATAIN2<3>     |DATAOUT<6>     |   11.096|
+DATAIN2<3>     |DATAOUT<7>     |   10.831|
+DATAIN2<3>     |DATAOUT<8>     |   12.111|
+DATAIN2<3>     |DATAOUT<9>     |   12.791|
+DATAIN2<3>     |DATAOUT<10>    |   14.189|
+DATAIN2<3>     |DATAOUT<11>    |   14.074|
+DATAIN2<3>     |DATAOUT<12>    |   14.582|
+DATAIN2<3>     |DATAOUT<13>    |   14.631|
+DATAIN2<4>     |DATAOUT<4>     |    8.291|
+DATAIN2<4>     |DATAOUT<5>     |    9.202|
+DATAIN2<4>     |DATAOUT<6>     |   10.995|
+DATAIN2<4>     |DATAOUT<7>     |   10.730|
+DATAIN2<4>     |DATAOUT<8>     |   12.083|
+DATAIN2<4>     |DATAOUT<9>     |   12.763|
+DATAIN2<4>     |DATAOUT<10>    |   14.161|
+DATAIN2<4>     |DATAOUT<11>    |   14.046|
+DATAIN2<4>     |DATAOUT<12>    |   14.554|
+DATAIN2<4>     |DATAOUT<13>    |   14.603|
+DATAIN2<5>     |DATAOUT<5>     |    8.999|
+DATAIN2<5>     |DATAOUT<6>     |   11.404|
+DATAIN2<5>     |DATAOUT<7>     |   11.139|
+DATAIN2<5>     |DATAOUT<8>     |   12.419|
+DATAIN2<5>     |DATAOUT<9>     |   13.099|
+DATAIN2<5>     |DATAOUT<10>    |   14.497|
+DATAIN2<5>     |DATAOUT<11>    |   14.382|
+DATAIN2<5>     |DATAOUT<12>    |   14.890|
+DATAIN2<5>     |DATAOUT<13>    |   14.939|
+DATAIN2<6>     |DATAOUT<6>     |   10.746|
+DATAIN2<6>     |DATAOUT<7>     |   10.481|
+DATAIN2<6>     |DATAOUT<8>     |   12.193|
+DATAIN2<6>     |DATAOUT<9>     |   12.873|
+DATAIN2<6>     |DATAOUT<10>    |   14.271|
+DATAIN2<6>     |DATAOUT<11>    |   14.156|
+DATAIN2<6>     |DATAOUT<12>    |   14.664|
+DATAIN2<6>     |DATAOUT<13>    |   14.713|
+DATAIN2<6>     |DATAOUT<14>    |    8.811|
+DATAIN2<6>     |DATAOUT<15>    |    8.717|
+DATAIN2<7>     |DATAOUT<7>     |   10.064|
+DATAIN2<7>     |DATAOUT<8>     |   12.247|
+DATAIN2<7>     |DATAOUT<9>     |   12.927|
+DATAIN2<7>     |DATAOUT<10>    |   14.325|
+DATAIN2<7>     |DATAOUT<11>    |   14.210|
+DATAIN2<7>     |DATAOUT<12>    |   14.718|
+DATAIN2<7>     |DATAOUT<13>    |   14.767|
+DATAIN2<7>     |DATAOUT<14>    |    9.047|
+DATAIN2<7>     |DATAOUT<15>    |    8.953|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Mar 28 15:47:21 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 217 MB
+
+
+

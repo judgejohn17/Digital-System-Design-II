@@ -1,0 +1,4 @@
+vhdl work "LogicalRightShifter.vhd"
+vhdl work "LogicalLeftShifter.vhd"
+vhdl work "ArithmeticRightShifter.vhd"
+vhdl work "Variable_Shifter_16.vhd"

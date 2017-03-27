@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "D:/DSDII/Lab01/comparator_top.xst" -ofn "D:/DSDII/Lab01/comparator_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc comparator_top.ucf -p xc6slx16-csg324-3 comparator_top.ngc comparator_top.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o comparator_top_map.ncd comparator_top.ngd comparator_top.pcf 
+par -w -intstyle ise -ol high -mt off comparator_top_map.ncd comparator_top.ncd comparator_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml comparator_top.twx comparator_top.ncd -o comparator_top.twr comparator_top.pcf -ucf comparator_top.ucf 
+bitgen -intstyle ise -f comparator_top.ut comparator_top.ncd 

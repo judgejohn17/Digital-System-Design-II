@@ -1,0 +1,14 @@
+# Output products list for <Multiplier_4x4>
+Multiplier_4x4.asy
+Multiplier_4x4.gise
+Multiplier_4x4.ngc
+Multiplier_4x4.sym
+Multiplier_4x4.vhd
+Multiplier_4x4.vho
+Multiplier_4x4.xco
+Multiplier_4x4.xise
+Multiplier_4x4\doc\mult_gen_ds255.pdf
+Multiplier_4x4\doc\mult_gen_v11_2_readme.txt
+Multiplier_4x4\doc\mult_gen_v11_2_vinfo.html
+Multiplier_4x4_flist.txt
+Multiplier_4x4_xmdf.tcl

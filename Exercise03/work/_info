@@ -1,0 +1,94 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\DSDII\Exercise03
+Eaddersub16bit
+Z1 w1457907248
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dD:\DSDII\Exercise03
+Z5 8Adder16Bit.vhd
+Z6 FAdder16Bit.vhd
+l0
+L16
+V9o;6Bm:VaGaP<RhHKlFdM1
+Z7 OL;C;10.1d;51
+31
+Z8 !s108 1458074011.730000
+Z9 !s90 -reportprogress|300|-explicit|-93|Adder16Bit.vhd|
+Z10 !s107 Adder16Bit.vhd|
+Z11 o-explicit -93
+Z12 tExplicit 1
+!s100 Ne:?20:eU1Velab[W<`Hi1
+!i10b 1
+Astructural
+R2
+R3
+DEx4 work 13 addersub16bit 0 22 9o;6Bm:VaGaP<RhHKlFdM1
+l32
+L24
+V?S:gnBeGjUjjV6=jdRMQh3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 oHE=;F]T_2bA<[2;i3AS;0
+!i10b 1
+Efulladder
+Z13 w1457907166
+R2
+R3
+R4
+Z14 8FullAdder.vhd
+Z15 FFullAdder.vhd
+l0
+L17
+VN@HE9JLeBDa5mLUOhg`@`0
+R7
+31
+Z16 !s108 1458074012.900000
+Z17 !s90 -reportprogress|300|-explicit|-93|FullAdder.vhd|
+Z18 !s107 FullAdder.vhd|
+R11
+R12
+!s100 YWPFQ;R@OMz2QhWVlP0::3
+!i10b 1
+Adataflow
+R2
+R3
+DEx4 work 9 fulladder 0 22 N@HE9JLeBDa5mLUOhg`@`0
+l27
+L25
+VGA74VM9L<]IP5]gde24zV0
+!s100 69@2]dg8VmMRnJ<z8jZ]73
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!i10b 1
+Emultiplier_8
+w1458072384
+R2
+R3
+R4
+8Multiplier_8.vhd
+FMultiplier_8.vhd
+l0
+L14
+V@BZ5]IKMZdLz`dCV_a9iO3
+!s100 9bcRjHod2ZgPnQfA]PRne1
+R7
+31
+!i10b 1
+!s108 1458074013.353000
+!s90 -reportprogress|300|-explicit|-93|Multiplier_8.vhd|
+!s107 Multiplier_8.vhd|
+R11
+R12

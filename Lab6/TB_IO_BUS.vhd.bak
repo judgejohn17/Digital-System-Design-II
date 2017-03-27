@@ -1,0 +1,327 @@
+-------------------------------------------------
+-- File:	TB_IO_BUS.VHD
+-- Entity: test bench
+-- Architecture:	Behavioral
+-- Author: John Judge
+-- Created: 3/12/16
+-- Modified: 3/12/16
+-- VHDL'93
+-- Description: The following is the test bench 
+-- used to test the IO_BUS
+-------------------------------------------------
+  LIBRARY ieee;
+  USE ieee.std_logic_1164.ALL;
+  USE ieee.numeric_std.ALL;
+  USE ieee.std_logic_textio.all;
+  USE std.textio.all;
+  
+  ENTITY testbench IS
+  END testbench;
+
+  ARCHITECTURE behavior OF testbench IS 
+  -- Component Declaration
+     COMPONENT IO_Bus
+          PORT(bus_id : in  STD_LOGIC_Vector (7 downto 0);
+           reset : in  STD_LOGIC;
+           rw : in  STD_LOGIC;
+           ready : in  STD_LOGIC;
+           burst : in  STD_LOGIC;
+           clk : in  STD_LOGIC;
+           addr_in : in  STD_LOGIC_VECTOR (2 downto 0);
+           data_in : in  STD_LOGIC_VECTOR (7 downto 0);
+           addr_out : out  STD_LOGIC_VECTOR (2 downto 0);
+           data_out : out  STD_LOGIC_VECTOR (7 downto 0);
+			  unused_anode      : out STD_LOGIC; -- unused an3
+			  hund_anode_out    : out STD_LOGIC; -- digilent an2
+		     tens_anode_out    : out STD_LOGIC; -- digilent an3
+           ones_anode_out    : out STD_LOGIC; -- digilent an4
+           CAn_out           : out STD_LOGIC;
+           CBn_out           : out STD_LOGIC;
+           CCn_out           : out STD_LOGIC;
+           CDn_out           : out STD_LOGIC;
+           CEn_out           : out STD_LOGIC;
+           CFn_out           : out STD_LOGIC;
+           CGn_out           : out STD_LOGIC);
+      END COMPONENT;
+  --Signals
+      signal bus_id				 : STD_LOGIC_Vector (7 downto 0):= "00000000";
+      signal reset				 : STD_LOGIC:= '1';
+      signal rw					 : STD_LOGIC:= '0';
+      signal ready				 : STD_LOGIC:= '0';
+      signal burst				 : STD_LOGIC:= '0';
+      signal clk					 : STD_LOGIC:= '0';
+      signal addr_in				 : STD_LOGIC_VECTOR (2 downto 0):= "000";
+      signal data_in				 : STD_LOGIC_VECTOR (3 downto 0):= "0000";
+      signal addr_out 			 : STD_LOGIC_VECTOR (2 downto 0); 
+      signal data_out 			 : STD_LOGIC_VECTOR (3 downto 0);
+		signal unused_anode      : STD_LOGIC; 
+	   signal hund_anode_out    : STD_LOGIC;
+		signal tens_anode_out    : STD_LOGIC; 
+      signal ones_anode_out    : STD_LOGIC; 
+      signal CAn_out           : STD_LOGIC;
+      signal CBn_out           : STD_LOGIC;
+      signal CCn_out           : STD_LOGIC;
+      signal CDn_out           : STD_LOGIC;
+      signal CEn_out           : STD_LOGIC;
+      signal CFn_out           : STD_LOGIC;
+      signal CGn_out           : STD_LOGIC; 
+		constant clk_period : time := 10 ns;
+  BEGIN
+
+  -- Component Instantiation
+          uut: IO_Bus PORT MAP(
+           bus_id => bus_id,
+           reset => reset,
+           rw => rw,
+           ready => ready,
+           burst => burst,
+           clk => clk,
+           addr_in => addr_in,
+           data_in => data_in,
+           addr_out => addr_out,
+           data_out => data_out,
+			  unused_anode => unused_anode,
+			  hund_anode_out => hund_anode_out,
+		     tens_anode_out => tens_anode_out,
+           ones_anode_out => ones_anode_out,
+           CAn_out => CAn_out,
+           CBn_out => CBn_out,
+           CCn_out => CCn_out,
+           CDn_out => CDn_out,
+           CEn_out => CEn_out,
+           CFn_out => CFn_out,
+           CGn_out => CGn_out);
+	-- Clock process definitions
+		clk_process :process
+		begin
+			clk <= '0';
+			wait for clk_period/2;
+			clk <= '1';
+			wait for clk_period/2;
+		end process;
+
+	--Test Bench Statements
+		tb : PROCESS
+		BEGIN
+			wait for 100 ns; -- wait until global set/reset completes
+			
+--Test Decision State		
+			bus_id <= "10000000"; --Invalid bus_id, state should remain in idle
+			wait for 50 ns;
+			assert addr_out = "000" --addr should be all 0's
+				report "Error, not in Idle" 
+				severity ERROR;
+				
+--Test Decision State			
+			bus_id <= "01000000"; --Invalis bus_id, state shpuld remain in Idle 
+			wait for 50 ns;
+			assert addr_out = "000" --addr should be all 0's
+				report "Error, not in Idle" 
+				severity ERROR;
+
+--Write 0 at 0		
+			RW <= '1';--Write data
+			data_in <= "00000000"; --give it some data to write 
+			addr_in <= "000"; --give it an adsress 
+			bus_id <= "00000000";--Valid bus_in
+			Ready <= '1'; -- go to Idle
+			wait for 50 ns;
+			Ready <= '0'; --reset the ready signal to 0
+			wait for 50 ns;
+			
+--Write 1 at 1		
+			RW <= '1';--Write data
+			data_in <= "00000001"; --give it some data to write 
+			addr_in <= "001"; --give it an adsress 
+			bus_id <= "00000000";--Valid bus_id
+			wait for 50 ns;
+			Ready <= '1'; -- go to Idle
+			wait for 50 ns;
+			assert addr_out = "000" --addr should be all 0's
+				report "Error, not in Idle" 
+				severity ERROR;
+			Ready <= '0'; --reset the ready signal to 0
+			wait for 50 ns;
+
+--Write 2 at 2		
+			RW <= '1';--Write data
+			data_in <= "00000010"; --give it some data to write 
+			addr_in <= "010"; --give it an adsress 
+			bus_id <= "00000000";--Valid bus_id
+			wait for 50 ns;
+			Ready <= '1'; -- go to Idle
+			wait for 50 ns;
+			assert addr_out = "000" --addr should be all 0's
+				report "Error, not in Idle" 
+				severity ERROR;
+			Ready <= '0'; --reset the ready signal to 0
+			wait for 50 ns;
+			
+--Write 3 at 3		
+			RW <= '1';--Write data
+			data_in <= "00000011"; --give it some data to write 
+			addr_in <= "011"; --give it an adsress 
+			bus_id <= "00000000";--Valid bus_id
+			wait for 50 ns;
+			Ready <= '1'; -- go to Idle
+			wait for 50 ns;
+			assert addr_out = "000" --addr should be all 0's
+				report "Error, not in Idle" 
+				severity ERROR;
+			Ready <= '0'; --reset the ready signal to 0
+			wait for 50 ns;
+			wait; -- will wait forever
+			
+--Write 4 at 4		
+			RW <= '1';--Write data
+			data_in <= "00000100"; --give it some data to write 
+			addr_in <= "100"; --give it an adsress 
+			bus_id <= "00000000";--Valid bus_id
+			wait for 50 ns;
+			Ready <= '1'; -- go to Idle
+			wait for 50 ns;
+			assert addr_out = "000" --addr should be all 0's
+				report "Error, not in Idle" 
+				severity ERROR;
+			Ready <= '0'; --reset the ready signal to 0
+			wait for 50 ns;
+			
+--Write 5 at 5		
+			RW <= '1';--Write data
+			data_in <= "00000101"; --give it some data to write 
+			addr_in <= "101"; --give it an adsress 
+			bus_id <= "00000000";--Valid bus_id
+			wait for 50 ns;
+			Ready <= '1'; -- go to Idle
+			wait for 50 ns;
+			assert addr_out = "000" --addr should be all 0's
+				report "Error, not in Idle" 
+				severity ERROR;
+			Ready <= '0'; --reset the ready signal to 0
+			wait for 50 ns;
+		
+--Write 6 at 6		
+			RW <= '1';--Write data
+			data_in <= "00000110"; --give it some data to write 
+			addr_in <= "110"; --give it an adsress 
+			bus_id <= "00000000";--Valid bus_id
+			wait for 50 ns;
+			Ready <= '1'; -- go to Idle
+			wait for 50 ns;
+			assert addr_out = "000" --addr should be all 0's
+				report "Error, not in Idle" 
+				severity ERROR;
+			Ready <= '0'; --reset the ready signal to 0
+			wait for 50 ns;	
+			
+--Write 7 at 7		
+			RW <= '1';--Write data
+			data_in <= "00000111"; --give it some data to write 
+			addr_in <= "111"; --give it an adsress 
+			bus_id <= "00000000";--Valid bus_id
+			wait for 50 ns;
+			Ready <= '1'; -- go to Idle
+			wait for 50 ns;
+			assert addr_out = "000" --addr should be all 0's
+				report "Error, not in Idle" 
+				severity ERROR;
+			Ready <= '0'; --reset the ready signal to 0
+			wait for 50 ns;
+
+--Read from position 0
+		RW <= '0';--Read
+		addr_in <= "000";--Positon one 
+		burst <= '0'; --single read
+		ready <= '1'; --I'm ready!
+		assert data_out = "00000000" --data should be null at position 0
+				report "Error, not in Read Single" 
+				severity ERROR;
+		Ready <= '0'; --reset the ready signal to 0, go to idle
+		wait for 50 ns;
+-- Burst read from positions 3 - 6
+
+		--Read_Burst0
+		RW <= '0';--Read
+		addr_in <= "011";--Positon three 
+		burst <= '1'; --Burst read this shit
+		ready <= '1'; --I'm ready!
+		assert addr_out = "011"
+			report "Error, not in Read_Burst0"
+			severity ERROR;
+		--This change in ready should bring it to Read_Burst1
+		Ready <= '0';
+		Wait for 50 ns;
+		Ready <= '1';
+		
+		--Read_Burst1
+		assert addr_out = "100"
+			report "Error, not in Read_Burst1"
+			severity ERROR;
+		--This change in ready should bring it to Read_Burst2
+		Ready <= '0';
+		Wait for 50 ns;
+		Ready <= '1';
+		
+		--Read_Burst2
+		assert addr_out = "101"
+			report "Error, not in Read_Burst2"
+			severity ERROR;
+		--This change in ready should bring it to Read_Burst3
+		Ready <= '0';
+		Wait for 50 ns;
+		Ready <= '1';
+		
+		--Read_Burst3
+		assert addr_out = "110"
+			report "Error, not in Read_Burst3"
+			severity ERROR;
+		--This change in ready should bring it to Idle
+		Ready <= '0';
+		Wait for 50 ns;
+		Ready <= '1';
+		
+--Burst with circular operation (6-1)
+	--Read_Burst0
+		RW <= '0';--Read
+		addr_in <= "110";--Positon Six
+		burst <= '1'; --Burst read this shit
+		ready <= '1'; --I'm ready!
+		assert addr_out = "110"
+			report "Error, not in Read_Burst0"
+			severity ERROR;
+		--This change in ready should bring it to Read_Burst1
+		Ready <= '0';
+		Wait for 50 ns;
+		Ready <= '1';
+		
+		--Read_Burst1
+		assert addr_out = "111"
+			report "Error, not in Read_Burst1"
+			severity ERROR;
+		--This change in ready should bring it to Read_Burst2
+		Ready <= '0';
+		Wait for 50 ns;
+		Ready <= '1';
+		
+		--Read_Burst2
+		assert addr_out = "000"
+			report "Error, not in Read_Burst2"
+			severity ERROR;
+		--This change in ready should bring it to Read_Burst3
+		Ready <= '0';
+		Wait for 50 ns;
+		Ready <= '1';
+		
+		
+		--Read_Burst3
+		assert addr_out = "001"
+			report "Error, not in Read_Burst3"
+			severity ERROR;
+		--This change in ready should bring it to Idle
+		Ready <= '0';
+		Wait for 50 ns;
+		Ready <= '1';
+		wait;
+	--End Test Bench 
+	END PROCESS tb;
+  END;

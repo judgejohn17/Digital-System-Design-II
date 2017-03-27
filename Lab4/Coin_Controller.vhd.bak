@@ -1,0 +1,145 @@
+-------------------------------------------------
+-- File:	Coin_Controller.VHD
+-- Entity: Moore State Machine
+-- Architecture:	Behavioral
+-- Author: John Judge
+-- Created: 3/12/16
+-- Modified: 3/12/16
+-- VHDL'93
+-- Description: The following is the entity and
+--	Behavioral description of finite State Machine
+-------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
+use ieee.std_logic_signed.all;
+
+
+entity Coin_Controller is
+    Port ( clk : in  STD_LOGIC;
+           Reset_n : in  STD_LOGIC;
+           Qp : in  STD_LOGIC;
+           Dp : in  STD_LOGIC;
+           Np : in  STD_LOGIC;
+           soda_price : in  STD_LOGIC_VECTOR (3 downto 0);
+           soda_req : in  STD_LOGIC;
+           amt_err : out  STD_LOGIC;
+           drop_soda : out  STD_LOGIC;
+           amt_dep : out  STD_LOGIC_VECTOR (11 downto 0));
+end Coin_Controller;
+architecture Behavioral of Coin_Controller is
+	TYPE state IS (Idle, Add25, Add10, Add5, CoinHolder, NoSoda, CheckPrice, DropSoda, Hold);
+	Signal Moore_State: state;
+	Signal CoinHolderAmount : STD_LOGIC_VECTOR (11 downto 0):= "000000000000";
+	Signal soda_price_temp : STD_LOGIC_VECTOR (11 downto 0):= "000000000000";
+	Signal CoinHolderAmountTemp: STD_LOGIC_VECTOR (11 downto 0) := "000000000000";
+	Signal RemainingValue: STD_LOGIC_VECTOR (11 downto 0) := "000000000000";
+BEGIN
+
+--Process for states
+Moore: Process(clk,Reset_n,Qp,Dp,Np,soda_req,soda_price)
+begin
+	IF(Reset_n = '0') THEN --Active high
+		CoinHolderAmount <= "000000000000";--Reset hold amount
+		soda_price_temp <= "000000000000";
+		Moore_State <= Idle;--Idle state is default 
+	
+
+	ELSIF(clk='1' AND clk'event) THEN--State change on clock 
+			
+		CASE Moore_State IS
+		
+		WHEN Idle =>
+
+			IF Qp = '1' THEN
+				Moore_State <= Add25;
+			ELSIF Dp = '1' THEN
+				Moore_State <= Add10;
+			ELSIF Np = '1' THEN
+				Moore_State <= Add5;
+			ELSIF soda_req = '1' THEN
+				Moore_State <= CheckPrice;
+			ELSE
+				Moore_State <= Idle;
+			END IF;
+			
+		WHEN CheckPrice =>
+			--Set soda_price_temp to the binary rep. of the cost
+			IF (soda_price = "0000") THEN
+				soda_price_temp <= "000000110111";
+			ElSIF (soda_price = "0001") THEN
+				soda_price_temp <= "000001010101";
+			ElSIF (soda_price = "0010") THEN
+				soda_price_temp <= "000001011111";
+			ElSIF (soda_price = "0011") THEN
+				soda_price_temp <= "000001111101";
+			ElSIF (soda_price = "0100") THEN
+				soda_price_temp <= "000010000111";
+			ElSIF (soda_price = "0101") THEN
+				soda_price_temp <= "000010010110";
+			ElSIF (soda_price = "0110") THEN
+				soda_price_temp <= "000011100001";
+			ElSIF (soda_price = "0111") THEN
+				soda_price_temp <= "000011111010";
+			ElSIF (soda_price = "1000") THEN
+				soda_price_temp <= "000100101100";
+			ELSE
+				soda_price_temp <= soda_price_temp;
+			END IF;
+			
+			RemainingValue <= CoinHolderAmountTemp - soda_price_temp;
+			--Find theoretical result of operation
+			IF RemainingValue(11) = 0 THEN -- problems
+				Moore_State <= DropSoda;
+			ELSE
+				Moore_State <= NoSoda;
+			END IF;
+			
+		WHEN NoSoda =>
+			Moore_State <= Idle;
+			IF soda_req = '0' THEN--Hold till button is unpressed
+				Moore_State <= Idle;
+			ELSE
+				Moore_State <= NoSoda;
+			END IF;
+			
+		WHEN DropSoda =>
+			CoinHolderAmount <= RemainingValue;--Set amount remaining because the operation was succesfull
+			IF soda_req = '0' THEN
+				Moore_State <= Idle;
+			ELSE
+				Moore_State <= DropSoda;
+			END IF;
+			
+		WHEN Add5 =>
+			CoinHolderAmountTemp <= CoinHolderAmountTemp + 5;--adds 5 to int
+			Moore_State <= CoinHolder;
+			
+		WHEN Add10 =>
+			CoinHolderAmountTemp <= CoinHolderAmountTemp + 10;--adds 10 to int
+			Moore_State <= CoinHolder;
+			
+		WHEN Add25 =>
+			CoinHolderAmountTemp <= CoinHolderAmountTemp + 25;--adds 25 to int
+			Moore_State <= CoinHolder;
+		
+		WHEN CoinHolder =>
+			CoinHolderAmount <= CoinHolderAmountTemp;
+			Moore_State <= Hold;
+			
+		WHEN Hold =>
+			IF Qp = '0' and Dp = '0' and Np = '0' THEN
+				Moore_State <= Idle;
+			ELSE
+				Moore_State <= Hold;
+			END IF;
+			
+			
+		END CASE;
+	END IF;
+END PROCESS;
+amt_err <= '1' WHEN Moore_State = NoSoda ELSE '0';
+drop_soda <= '1' WHEN Moore_State = DropSoda ELSE '0';
+amt_dep <= CoinHolderAmount; 
+end Behavioral;
+

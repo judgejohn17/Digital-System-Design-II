@@ -1,0 +1,5 @@
+work	"LUT4.vhd"
+work	"boolean_equation.vhd"
+work	"comparator_top.vhd"
+work	"if_then_else.vhd"
+work	"when_else.vhd"
