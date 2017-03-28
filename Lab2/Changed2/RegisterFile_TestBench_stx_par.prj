@@ -1,2 +1,0 @@
-vhdl isim_temp "netgen/par/RegisterFile_timesim.vhd"
-vhdl isim_temp "RegisterFile_TestBench.vhd"

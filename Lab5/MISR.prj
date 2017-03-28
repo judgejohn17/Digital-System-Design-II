@@ -1,4 +1,0 @@
-vhdl work "XORgate.vhd"
-vhdl work "Multiplexer2to1_1bit.vhd"
-vhdl work "DFlipFlopMISR.vhd"
-vhdl work "MISR.vhd"

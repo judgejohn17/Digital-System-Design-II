@@ -1,6 +1,0 @@
-vhdl work "SRAM.vhd"
-vhdl work "MemoryController.vhd"
-vhdl work "../Lab4/seven_seg_disp.vhd"
-vhdl work "../Lab4/seven_seg_dec.vhd"
-vhdl work "../Lab4/bin_bcd.vhd"
-vhdl work "IO_Bus.vhd"

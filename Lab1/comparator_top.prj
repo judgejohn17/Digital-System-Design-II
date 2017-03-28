@@ -1,5 +1,0 @@
-vhdl work "when_else.vhd"
-vhdl work "LUT4.vhd"
-vhdl work "if_then_else.vhd"
-vhdl work "boolean_equation.vhd"
-vhdl work "comparator_top.vhd"

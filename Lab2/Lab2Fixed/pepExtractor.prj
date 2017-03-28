@@ -1,4 +1,0 @@
-work	"Decoder3to8.vhd"
-work	"MUX8_1.vhd"
-work	"RegisterFile.vhd"
-work	"RegisterModule.vhd"

@@ -1,9 +1,0 @@
-xst -intstyle ise -ifn "D:/DSDII/Lab3/Multiplier_8.xst" -ofn "D:/DSDII/Lab3/Multiplier_8.syr" 
-xst -intstyle ise -ifn "D:/DSDII/Lab3/Multiplier_8.xst" -ofn "D:/DSDII/Lab3/Multiplier_8.syr" 
-xst -intstyle ise -ifn "D:/DSDII/Lab3/Multiplier_8.xst" -ofn "D:/DSDII/Lab3/Multiplier_8.syr" 
-xst -intstyle ise -ifn "D:/DSDII/Lab3/Multiplier_8.xst" -ofn "D:/DSDII/Lab3/Multiplier_8.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Multiplier_8.ngc Multiplier_8.ngd  
-map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Multiplier_8_map.ncd Multiplier_8.ngd Multiplier_8.pcf 
-par -w -intstyle ise -ol high -mt off Multiplier_8_map.ncd Multiplier_8.ncd Multiplier_8.pcf 
-trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Multiplier_8.twx Multiplier_8.ncd -o Multiplier_8.twr Multiplier_8.pcf 
-xst -intstyle ise -ifn "D:/DSDII/Lab3/Multiplier_8.xst" -ofn "D:/DSDII/Lab3/Multiplier_8.syr" 
